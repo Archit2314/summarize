@@ -31,7 +31,7 @@ with st.sidebar:
     if api_key:
         try:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             st.success("✅ API key configured successfully!")
         except Exception as e:
             st.error(f"❌ Error configuring API: {e}")
@@ -213,3 +213,4 @@ with st.expander("📖 How to use"):
        - Wait for processing to complete
        - Download or copy the results
     """)
+
